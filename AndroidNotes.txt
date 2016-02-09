@@ -1,0 +1,44 @@
+XML View
+
+-View Model = Abstract view like horizontal or vertical
+-View = things like text fields and buttons
+-Keep values like string definitions extracted from activity in XML
+-Add text fields and button objects under the Linear Layout View model
+
+
+Java
+
+-In order for the system to match a button method to an onClick event the method must...
+	-be public
+	-have a void return value
+	-have a "View" as the only parameter
+-Intent
+	-Intents are used to start an activity
+	-activity is like a new screen
+	-Constructor takes 2 parameters
+		-Context
+		-Class of the app component to which the system should deliver the Intent
+	-Must import the Intent class (import android.content.Intent)
+	-An Intent can carry data types as key-value pairs called "extras"
+	-call startActivity()
+		-System receives this call and starts an instance of the Avtivity specified by the Intent
+
+Creating a new Activity
+
+-All subclasses must implement the onCreate() method
+-onCreat() must define the activity layout with the setContentView() method
+
+Adding an Action Bar
+
+-Action bar should be consistent with other android apps
+-at the bare minimum should show the title of the app
+-For Android 3.0 and above, action bar is included in all activities that use Theme.Holo
+
+Adding Action Buttons
+
+-add icons and titles on action bar
+-any name following @drawable must be the name of bitmap image in res/drawable directory
+
+Responding to Action Buttons
+
+-add case statement in onOptionsItemSelected() method to determine which button was pushed
